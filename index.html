@@ -5,13 +5,11 @@
         <title>Welcome to Hillsong</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-        <link rel="stylesheet" href="stylesheet.css">
+<!-- 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"> -->
     <style>
-        .flex-container {
-            display: flex;
-            flex-direction: column;
+        body {
+            margin: 0;
         }
         .horizontal-spacing {
             display: flex;
@@ -35,9 +33,6 @@
             background-color: black;
             color: white;
         }
-        .child {
-            margin: 0 auto;
-        }
         .center {
             max-width: 100%;
             margin: 0 auto;
@@ -49,7 +44,7 @@
     </head>
 
     <body>
-      <div class="flex-container">
+      <div>
         <div class="parent">
             <img src="landing1.png" class="center">
         </div>
@@ -81,11 +76,11 @@
         <div class="horizontal-spacing">
             <div class="vertical-center">
                 <div style="width: 80%">
-                    <a class="button button--textlink" href="http://itunes.apple.com/de/app/sennheiser-mobileconnect/id848127271" tabindex="0"><img src="apple.png" alt="Download iOS App: Apple App Store" style="margin: 0 0px; max-width: 100%"></a>
+                    <a href="http://itunes.apple.com/de/app/sennheiser-mobileconnect/id848127271" tabindex="0"><img src="apple.png" alt="Download iOS App: Apple App Store" style="max-width: 100%"></a>
                 </div>
                 <div style="width: 80%">
-                    <a class="button button--textlink" href="http://play.google.com/store/apps/details?id=de.sennheiser.sst.mobileconnect" tabindex="0"><img src="android.png"alt="Download Android App: Google Play Store"
-                    style="margin: 0 0px; max-width: 100%"></a>
+                    <a href="http://play.google.com/store/apps/details?id=de.sennheiser.sst.mobileconnect" tabindex="0"><img src="android.png"alt="Download Android App: Google Play Store"
+                    style="max-width: 100%"></a>
                 </div>
             </div>
             <div class="vertical-center">
