@@ -2,22 +2,95 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Gustoso</title>
+        <title>Welcome to Hillsong</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
         <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .horizontal-spacing {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .vertical-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 50%;
+        }
+        .parent {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .dark-background {
+            background-color: black;
+            color: white;
+        }
+        .child {
+            margin: 0 auto;
+        }
+        .center {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .uppercase {
+            text-transform: uppercase;
+        }
+    </style>
     </head>
 
     <body>
-      <div>
-        <div>
-            <a class="button button--textlink" href="http://itunes.apple.com/de/app/sennheiser-mobileconnect/id848127271" tabindex="0"><img src="apple.png" style="width:50%" alt="Download iOS App: Apple App Store"></a>
+      <div class="flex-container">
+        <div class="parent">
+            <img src="landing1.png" class="center">
         </div>
-        <div>
-            <a class="button button--textlink" href="http://play.google.com/store/apps/details?id=de.sennheiser.sst.mobileconnect" tabindex="0"><img src="android.png" style="width:50%" alt="Download Android App: Google Play Store"></a>
+        <!-- <div class="parent dark-background">
+            <div class="child center">
+                <div class="uppercase">Selamat, Anda Berhasil Terhubung!</div>
+                <div class="uppercase">
+                    Congratulations, You are Connected!
+                </div>
+            </div>
         </div>
+        <div class="parent">
+            <div class="child center">
+                <div class="uppercase">Lihat di Bawah Ini untuk Sistem Penerjemah Anda!</div>
+                <div class="uppercase">
+                    Scroll Down Here for Your In-Ear Translation System!
+                </div>
+            </div>
+        </div> -->
+        <div class="parent">
+            <img src="landing2.png" class="center">
+        </div>
+        <div class="parent">
+            <img src="landing3.png" class="center">
+        </div>
+        <div class="parent">
+            <img src="landing4.png" class="center">
+        </div>
+        <div class="horizontal-spacing">
+            <div class="vertical-center">
+                <div style="width: 80%">
+                    <a class="button button--textlink" href="http://itunes.apple.com/de/app/sennheiser-mobileconnect/id848127271" tabindex="0"><img src="apple.png" alt="Download iOS App: Apple App Store" style="margin: 0 0px; max-width: 100%"></a>
+                </div>
+                <div style="width: 80%">
+                    <a class="button button--textlink" href="http://play.google.com/store/apps/details?id=de.sennheiser.sst.mobileconnect" tabindex="0"><img src="android.png"alt="Download Android App: Google Play Store"
+                    style="margin: 0 0px; max-width: 100%"></a>
+                </div>
+            </div>
+            <div class="vertical-center">
+                <img src="landing5.png" class="center" style="max-width: 100%">
+            </div>
       </div>
     </body>
 </html>
