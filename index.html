@@ -89,7 +89,8 @@
       </div>
       <script>
           if (navigator.userAgent.match(/android/i)) {
-                document.getElementById('play-store-link').href = 'market://details?id=de.sennheiser.sst.mobileconnect';
+              // document.getElementById('play-store-link').href = 'market://details?id=de.sennheiser.sst.mobileconnect';
+              document.getElementById('play-store-link').addEventListener('click', function() { window.alert("Please open http://app.hillsongbali in your web browser") });
           }
       </script>
     </body>
