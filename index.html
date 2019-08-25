@@ -92,8 +92,9 @@
               var playStoreLink = document.getElementById('play-store-link');
               playStoreLink.addEventListener('click', function(event) {
                   event.preventDefault();
-                  window.open('market://details?id=de.sennheiser.sst.mobileconnect', '_system');
-                  window.alert('Please open http://app.link in your web browser');
+                  if (!window.open('market://details?id=de.sennheiser.sst.mobileconnect', '_system')) {
+                      window.alert('Please open http://app.link in your Chrome web browser');
+                  }
                   return false;
               });
           }
