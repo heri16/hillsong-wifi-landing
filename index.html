@@ -89,8 +89,12 @@
       </div>
       <script>
           if (navigator.userAgent.match(/android/i)) {
-              // document.getElementById('play-store-link').href = 'market://details?id=de.sennheiser.sst.mobileconnect';
-              document.getElementById('play-store-link').addEventListener('click', function() { window.alert("Please open http://app.hillsongbali in your web browser") });
+              var playStoreLink = document.getElementById('play-store-link');
+              // playStoreLink.href = 'market://details?id=de.sennheiser.sst.mobileconnect';
+              playStoreLink.addEventListener('click', function() {
+                  window.alert('Please open http://app.bit.ly in your web browser');
+                  window.open('market://details?id=de.sennheiser.sst.mobileconnect', '_system');
+              });
           }
       </script>
     </body>
