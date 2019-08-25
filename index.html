@@ -79,7 +79,7 @@
                     <a href="http://itunes.apple.com/de/app/sennheiser-mobileconnect/id848127271" tabindex="0"><img src="apple.png" alt="Download iOS App: Apple App Store" style="max-width: 100%"></a>
                 </div>
                 <div style="width: 80%">
-                    <a target="_blank" href="http://play.google.com/store/apps/details?id=de.sennheiser.sst.mobileconnect" tabindex="0"><img src="android.png"alt="Download Android App: Google Play Store"
+                    <a id="play-store-link" href="http://play.google.com/store/apps/details?id=de.sennheiser.sst.mobileconnect" tabindex="0"><img src="android.png"alt="Download Android App: Google Play Store"
                     style="max-width: 100%"></a>
                 </div>
             </div>
@@ -87,5 +87,10 @@
                 <img src="landing5.png" class="center" style="max-width: 100%">
             </div>
       </div>
+      <script>
+          if (navigator.userAgent.match(/android/i)) {
+                document.getElementById('play-store-link').href = 'market://details?id=de.sennheiser.sst.mobileconnect';
+          }
+      </script>
     </body>
 </html>
