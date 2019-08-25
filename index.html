@@ -81,6 +81,7 @@
                 <div style="width: 80%">
                     <a id="play-store-link" href="http://play.google.com/store/apps/details?id=de.sennheiser.sst.mobileconnect" tabindex="0"><img src="android.png"alt="Download Android App: Google Play Store"
                     style="max-width: 100%"></a>
+                    <div id="play-store-info" style="display: none">Please open http://app.link in your Chrome web browser to continue.</div>
                 </div>
             </div>
             <div class="vertical-center">
@@ -90,11 +91,11 @@
       <script>
           if (navigator.userAgent.match(/android/i)) {
               var playStoreLink = document.getElementById('play-store-link');
+              var playStoreInfo = document.getElementById('play-store-info');
               playStoreLink.addEventListener('click', function(event) {
+                  window.open('market://details?id=de.sennheiser.sst.mobileconnect', '_system');
+                  playStoreInfo.style.display = 'block';
                   event.preventDefault();
-                  if (!window.open('market://details?id=de.sennheiser.sst.mobileconnect', '_system')) {
-                      window.alert('Please open http://app.link in your Chrome web browser');
-                  }
                   return false;
               });
           }
