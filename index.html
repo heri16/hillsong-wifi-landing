@@ -97,10 +97,10 @@
         <div class="horizontal-spacing">
             <div class="vertical-center">
                 <div style="width: 80%">
-                    <a href="http://itunes.apple.com/de/app/sennheiser-mobileconnect/id848127271" tabindex="0"><img src="apple.png" alt="Download iOS App: Apple App Store" style="max-width: 100%"></a>
+                    <a href="https://itunes.apple.com/de/app/sennheiser-mobileconnect/id848127271" tabindex="0"><img src="apple.png" alt="Download iOS App: Apple App Store" style="max-width: 100%"></a>
                 </div>
                 <div style="width: 80%">
-                    <a id="play-store-link" href="http://play.google.com/store/apps/details?id=de.sennheiser.sst.mobileconnect" tabindex="0"><img src="android.png"alt="Download Android App: Google Play Store"
+                    <a id="play-store-link" href="https://play.google.com/store/apps/details?id=de.sennheiser.sst.mobileconnect" tabindex="0"><img src="android.png"alt="Download Android App: Google Play Store"
                     style="max-width: 100%"></a>
                     <div id="play-store-info" style="display: none">Please open http://app.link in your Android web browser to download the app.</div>
                 </div>
@@ -111,6 +111,15 @@
       </div>
       <script>
           var os = getMobileOS();
+
+          if (window.location.search === '?app') {
+              if (os === 'iOS') {
+                  window.open('https://itunes.apple.com/de/app/sennheiser-mobileconnect/id848127271', '_system');
+              } else if (os === 'Android') {
+                  window.open('market://details?id=de.sennheiser.sst.mobileconnect', '_system');
+              }
+          }
+
           if (os === 'Android') {
               var playStoreLink = document.getElementById('play-store-link');
               if (window.fetch) {
