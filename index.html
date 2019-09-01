@@ -61,6 +61,17 @@
 
             return "unknown";
         }
+        
+        function testLocalStorage() {
+            var mod = 'modernizr';
+            try {
+                localStorage.setItem(mod, mod);
+                localStorage.removeItem(mod);
+                return true;
+            } catch (e) {
+                return false;
+            }
+        }
     </script>
     </head>
 
@@ -122,7 +133,7 @@
 
           if (os === 'Android') {
               var playStoreLink = document.getElementById('play-store-link');
-              if (window.fetch) {
+              if (testLocalStorage()) {
                   if (playStoreLink) { playStoreLink.href = 'market://details?id=de.sennheiser.sst.mobileconnect'; }
               } else {
                   var playStoreInfo = document.getElementById('play-store-info');
