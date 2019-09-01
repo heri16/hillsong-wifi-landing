@@ -112,7 +112,8 @@
       <script>
           var os = getMobileOS();
 
-          if (window.location.search === '?app') {
+          if (window.location.hash === '#app') {
+              window.open('https://itunes.apple.com/de/app/sennheiser-mobileconnect/id848127271', '_system');
               if (os === 'iOS') {
                   window.open('https://itunes.apple.com/de/app/sennheiser-mobileconnect/id848127271', '_system');
               } else if (os === 'Android') {
